@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="بيتك - كل احتياجات بيتك في مكان واحد">
+  <title>بيتك | كل احتياجات بيتك في مكان واحد</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="logo" href="#"><span class="logo-icon">⌂</span><span>بيتك<small>كل احتياجات بيتك في مكان واحد</small></span></a>
+  <nav><a href="#home">الرئيسية</a><a href="#products">المنتجات</a><a href="#why">ليه بيتك؟</a></nav>
+  <button class="cart-btn" id="openCart">🛒 السلة <b id="cartCount">0</b></button>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="hero-copy">
+      <span class="eyebrow">أهلاً بيك في بيتك</span>
+      <h1>كل اللي بيتك محتاجه<br><em>في مكان واحد</em></h1>
+      <p>اختار احتياجاتك من أدوات المطبخ والمنتجات المنزلية، واطلب بسهولة عن طريق واتساب.</p>
+      <a class="primary-btn" href="#products">ابدأ التسوق <span>←</span></a>
+      <div class="hero-points"><span>✓ أسعار مناسبة</span><span>✓ طلب سهل</span><span>✓ الدفع عند الاستلام</span></div>
+    </div>
+    <div class="hero-art"><div class="hero-circle"></div><div class="hero-card">🏡<strong>بيتك</strong><small>اختيارات عملية كل يوم</small></div><span class="spark s1">✦</span><span class="spark s2">✧</span></div>
+  </section>
+
+  <section class="benefits" id="why">
+    <div><span>🛍️</span><p><b>تسوق بسهولة</b><small>اختار المنتجات من مكانك</small></p></div>
+    <div><span>💬</span><p><b>تأكيد عبر واتساب</b><small>نتواصل معاك لتأكيد الطلب</small></p></div>
+    <div><span>💵</span><p><b>الدفع عند الاستلام</b><small>ادفع لما تستلم طلبك</small></p></div>
+  </section>
+
+  <section class="catalog" id="products">
+    <div class="section-heading"><div><span class="eyebrow">تسوق مجموعتنا</span><h2>منتجاتنا</h2><p>اختار اللي يناسب بيتك</p></div><div class="search-wrap"><input id="searchInput" type="search" placeholder="دور على منتج..."></div></div>
+    <div class="filters" id="filters"></div>
+    <div class="product-grid" id="productGrid"></div>
+    <p class="empty" id="emptyState" hidden>مفيش منتجات مطابقة للبحث.</p>
+  </section>
+</main>
+<footer><div class="footer-logo">⌂ بيتك</div><p>كل احتياجات بيتك في مكان واحد</p><small>© <span id="year"></span> بيتك. جميع الحقوق محفوظة.</small></footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="cart-panel" id="cartPanel" aria-label="سلة المشتريات">
+  <div class="cart-head"><div><span class="eyebrow">طلبك</span><h3>سلة المشتريات</h3></div><button class="close-btn" id="closeCart">✕</button></div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="cart-bottom"><div class="total-row"><span>الإجمالي المبدئي</span><b id="cartTotal">0 ج.م</b></div><small>مصاريف التوصيل يتم تأكيدها معاك على واتساب.</small><button id="checkoutBtn" class="primary-btn full">اطلب على واتساب <span>←</span></button></div>
+</aside>
+<script src="products.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
